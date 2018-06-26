@@ -6,4 +6,4 @@ Effekt: Diese PDFs können durch Desktop-Suchmaschinen (bspw. recoll oder spotli
 
 Wenn ich mich richtig erinnere, folgende Tools werden gebraucht (hier Ubuntu/Debian):
 
-sudo apt install ghostscript poppler-utils cuneiform pdfsandwich
+<code>sudo apt install ghostscript poppler-utils cuneiform pdfsandwich</code>
