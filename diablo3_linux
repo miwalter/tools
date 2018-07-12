@@ -1,0 +1,29 @@
+Diablo 3 in Wine/unter Linux installieren:
+
+Wine Staging installieren (x86-Version auf x64-Systemen):
+
+sudo dpkg --add-architecture i386 
+wget -qO- https://dl.winehq.org/wine-builds/Release.key | sudo apt-key add -
+sudo apt-add-repository 'deb http://dl.winehq.org/wine-builds/ubuntu/ artful main'
+sudo apt install winehq-staging
+
+In PlayOnLinux (POL):
+- neue virtuelle Platte (Name bspw. diablo3)
+- Wine auf Windows 7 konfigurieren
+- POL_Install_corefonts
+- POL_Install_d3dx9
+- POL_Install_tahoma
+- Battle.Net-Installer laufen lassen (Fehler ignorieren)
+- Shortcut auf Battle.net.exe
+- Wine-Version "System" auswählen
+
+in einer Shell über POL Visual C 2015 Runtime installieren:
+
+wget https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
+chmod +x winetricks
+WINEPREFIX=/home/BENUTZERNAME/.PlayOnLinux/wineprefix/diablo3 ./winetricks -q vcrun2015
+
+in Diablo 3 selbst "Windowed Fullscreen" auswählen, sonst bleibt manchmal der Mauscursor stehen
+
+läuft - und zwar richtig flott :D
+
